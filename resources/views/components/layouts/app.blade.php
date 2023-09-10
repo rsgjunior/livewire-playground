@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" defer></script>
 </head>
 
 <body>
@@ -23,27 +24,42 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a 
-                        href="{{ route('home') }}" 
+                    <a
+                        href="{{ route('home') }}"
                         @class([
                             'nav-link',
                             'text-white',
                             'active' => Route::is('home')
-                        ]) 
+                        ])
+                        wire:navigate
                     >
                         Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a 
-                        href="{{ route('counter') }}" 
+                    <a
+                        href="{{ route('counter') }}"
                         @class([
                             'nav-link',
                             'text-white',
                             'active' => Route::is('counter')
-                        ]) 
+                        ])
+                        wire:navigate
                     >
                         Counter
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="{{ route('lazy-loading') }}"
+                        @class([
+                            'nav-link',
+                            'text-white',
+                            'active' => Route::is('lazy-loading')
+                        ])
+                        wire:navigate
+                    >
+                        Lazy Loading
                     </a>
                 </li>
             </ul>
@@ -71,8 +87,6 @@
         </div>
     </main>
 
-
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
 </html>

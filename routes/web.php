@@ -2,6 +2,7 @@
 
 use App\Livewire\Counter;
 use App\Livewire\Home;
+use App\Livewire\LazyLoading;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('home');
 Route::get('/counter', Counter::class)->name('counter');
+Route::get('/lazy-loading', LazyLoading::class)->name('lazy-loading');
