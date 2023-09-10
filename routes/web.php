@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Home::class);
-Route::get('/counter', Counter::class);
+Route::get('/', Home::class)->name('home');
+Route::get('/counter', Counter::class)->name('counter');
